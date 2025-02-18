@@ -1,0 +1,574 @@
+[
+  {
+    "product_name": "Smartphone",
+    "model_number": "SM-12345",
+    "serial_number": "SN123456789",
+    "date_of_purchase": "2024-01-15",
+    "return_eligibility_period": "15 days",
+    "return_policy": {
+      "eligible": [
+        "Product is unused and in original packaging",
+        "Manufacturing defect reported within the return window",
+        "Incorrect product received"
+      ],
+      "not_eligible": [
+        "Physical damage after delivery",
+        "Software modifications by the user",
+        "Accessories missing from the package"
+      ]
+    },
+    "refund_eligibility_period": "15 days",
+    "refund_policy": {
+      "eligible": [
+        "Unused and in original packaging",
+        "Manufacturing defects reported within the eligibility period",
+        "Incorrect product received"
+      ],
+      "not_eligible": [
+        "Physical damage after delivery",
+        "Software issues caused by user modifications",
+        "Accessories missing from the package"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Manufacturing defects",
+        "Hardware malfunctions",
+        "Battery issues (excluding wear and tear)",
+        "Screen defects (excluding physical damage)"
+      ],
+      "not_covered": [
+        "Physical damage",
+        "Water damage",
+        "Software issues due to third-party apps",
+        "Unauthorized repairs"
+      ]
+    },
+    "exchange_eligibility_period": "15 days",
+    "exchange_policy": {
+      "eligible": [
+        "Defective product received",
+        "Incorrect model or variant delivered",
+        "Product is unused and in original packaging"
+      ],
+      "not_eligible": [
+        "Physical damage after delivery",
+        "User modifications (software or hardware)",
+        "Accessories missing from the package"
+      ]
+    }
+  },
+  {
+    "product_name": "Laptop",
+    "model_number": "LP-67890",
+    "serial_number": "SN987654321",
+    "date_of_purchase": "2023-12-10",
+    "return_eligibility_period": "10 days",
+    "return_policy": {
+      "eligible": [
+        "Defective hardware upon arrival",
+        "Wrong product received",
+        "Sealed package returned"
+      ],
+      "not_eligible": [
+        "User-installed software issues",
+        "Accidental damage",
+        "Tampered or missing serial number"
+      ]
+    },
+    "refund_eligibility_period": "10 days",
+    "refund_policy": {
+      "eligible": [
+        "Defective hardware upon arrival",
+        "Wrong product delivered",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "User-installed software issues",
+        "Accidental damage",
+        "Tampered or missing serial number"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Motherboard failure",
+        "RAM or SSD issues",
+        "Screen defects (excluding physical damage)",
+        "Battery defects (excluding wear and tear)"
+      ],
+      "not_covered": [
+        "Accidental damage",
+        "Spillage of liquid",
+        "Virus/malware infections",
+        "Unauthorized hardware modifications"
+      ]
+    },
+    "exchange_eligibility_period": "10 days",
+    "exchange_policy": {
+      "eligible": [
+        "Defective hardware upon arrival",
+        "Wrong model or configuration received",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "User-installed software modifications",
+        "Accidental damage",
+        "Tampered or missing serial number"
+      ]
+    }
+  },
+  {
+    "product_name": "Smartwatch",
+    "model_number": "SW-54321",
+    "serial_number": "SN112233445",
+    "date_of_purchase": "2024-02-05",
+    "return_eligibility_period": "7 days",
+    "return_policy": {
+      "eligible": [
+        "Product not functioning as advertised",
+        "Defective unit",
+        "Sealed package returned"
+      ],
+      "not_eligible": [
+        "Scratches or signs of usage",
+        "Water damage",
+        "Strap discoloration"
+      ]
+    },
+    "refund_eligibility_period": "7 days",
+    "refund_policy": {
+      "eligible": [
+        "Product not functioning as advertised",
+        "Defective unit",
+        "Sealed package returned"
+      ],
+      "not_eligible": [
+        "Scratches or signs of usage",
+        "Water damage",
+        "Strap discoloration"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Display malfunctions",
+        "Battery defects",
+        "Connectivity issues (Bluetooth, Wi-Fi)"
+      ],
+      "not_covered": [
+        "Strap wear and tear",
+        "Scratches and dents",
+        "Water damage beyond rated protection"
+      ]
+    },
+    "exchange_eligibility_period": "7 days",
+    "exchange_policy": {
+      "eligible": [
+        "Product not functioning as advertised",
+        "Defective unit",
+        "Sealed package returned"
+      ],
+      "not_eligible": [
+        "Scratches or signs of usage",
+        "Water damage",
+        "Strap discoloration"
+      ]
+    }
+  },
+  {
+    "product_name": "Wireless Earbuds",
+    "model_number": "WE-98765",
+    "serial_number": "SN998877665",
+    "date_of_purchase": "2023-11-20",
+    "return_eligibility_period": "14 days",
+    "return_policy": {
+      "eligible": [
+        "No sound output or connectivity issues",
+        "Unused and sealed packaging",
+        "Received the wrong item"
+      ],
+      "not_eligible": [
+        "Earbuds show signs of use",
+        "Battery degradation due to regular use",
+        "Charging case scratched or damaged"
+      ]
+    },
+    "refund_eligibility_period": "14 days",
+    "refund_policy": {
+      "eligible": [
+        "No sound output or connectivity issues",
+        "Unused and sealed packaging",
+        "Received the wrong item"
+      ],
+      "not_eligible": [
+        "Earbuds show signs of use",
+        "Battery degradation due to regular use",
+        "Charging case scratched or damaged"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Sound distortion",
+        "Battery issues",
+        "Charging case defects"
+      ],
+      "not_covered": [
+        "Physical damage",
+        "Loss of earbuds",
+        "Water damage beyond rated protection"
+      ]
+    },
+    "exchange_eligibility_period": "14 days",
+    "exchange_policy": {
+      "eligible": [
+        "One or both earbuds not working",
+        "Incorrect product received",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "Signs of use (earwax, dirt, scratches)",
+        "Charging case damaged by user",
+        "Battery degradation due to use"
+      ]
+    }
+  },
+  {
+    "product_name": "Smart TV",
+    "model_number": "TV-24680",
+    "serial_number": "SN556677889",
+    "date_of_purchase": "2023-10-25",
+    "return_eligibility_period": "7 days",
+    "return_policy": {
+      "eligible": [
+        "Screen not turning on upon arrival",
+        "Received a different model",
+        "Manufacturing defects"
+      ],
+      "not_eligible": [
+        "Cracked screen after delivery",
+        "Damage due to voltage fluctuations",
+        "Installation issues"
+      ]
+    },
+    "refund_eligibility_period": "7 days",
+    "refund_policy": {
+      "eligible": [
+        "Screen not turning on upon arrival",
+        "Received a different model",
+        "Manufacturing defects"
+      ],
+      "not_eligible": [
+        "Cracked screen after delivery",
+        "Damage due to voltage fluctuations",
+        "Installation issues"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Display malfunctions",
+        "Power supply defects",
+        "Remote control issues"
+      ],
+      "not_covered": [
+        "Screen cracks",
+        "Burn-in effects",
+        "Issues due to voltage fluctuations"
+      ]
+    },
+    "exchange_eligibility_period": "7 days",
+    "exchange_policy": {
+      "eligible": [
+        "Screen not turning on upon arrival",
+        "Received a different model",
+        "Manufacturing defects"
+      ],
+      "not_eligible": [
+        "Cracked screen after delivery",
+        "Damage due to voltage fluctuations",
+        "Improper installation by user"
+      ]
+    }
+  },
+  {
+    "product_name": "Gaming Console",
+    "model_number": "GC-13579",
+    "serial_number": "SN667788990",
+    "date_of_purchase": "2023-09-30",
+    "return_eligibility_period": "10 days",
+    "return_policy": {
+      "eligible": [
+        "Console does not power on",
+        "Wrong model received",
+        "Unopened and unused product"
+      ],
+      "not_eligible": [
+        "Scratches or damage after unboxing",
+        "User-modified software",
+        "Missing accessories or cables"
+      ]
+    },
+    "refund_eligibility_period": "10 days",
+    "refund_policy": {
+      "eligible": [
+        "Console does not power on",
+        "Wrong model received",
+        "Unopened and unused product"
+      ],
+      "not_eligible": [
+        "Scratches or damage after unboxing",
+        "User-modified software",
+        "Missing accessories or cables"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "System failure",
+        "Controller connectivity issues",
+        "Overheating defects"
+      ],
+      "not_covered": [
+        "Scratches and dents",
+        "Game disc issues",
+        "Software crashes due to third-party apps"
+      ]
+    },
+    "exchange_eligibility_period": "10 days",
+    "exchange_policy": {
+      "eligible": [
+        "Console does not power on",
+        "Wrong model received",
+        "Unopened and unused product"
+      ],
+      "not_eligible": [
+        "Scratches or damage after unboxing",
+        "User-modified software",
+        "Missing accessories or cables"
+      ]
+    }
+  },
+  {
+    "product_name": "Bluetooth Speaker",
+    "model_number": "BS-24681",
+    "serial_number": "SN334455667",
+    "date_of_purchase": "2023-08-15",
+    "return_eligibility_period": "15 days",
+    "return_policy": {
+      "eligible": [
+        "Speaker not functioning properly",
+        "Incorrect model received",
+        "Defective battery"
+      ],
+      "not_eligible": [
+        "Scratches, dents, or water damage",
+        "Signs of excessive use",
+        "Connectivity issues caused by user error"
+      ]
+    },
+    "refund_eligibility_period": "15 days",
+    "refund_policy": {
+      "eligible": [
+        "Speaker not functioning properly",
+        "Incorrect model received",
+        "Defective battery"
+      ],
+      "not_eligible": [
+        "Scratches, dents, or water damage",
+        "Signs of excessive use",
+        "Connectivity issues caused by user error"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Bluetooth connectivity issues",
+        "Charging defects",
+        "Speaker distortion"
+      ],
+      "not_covered": [
+        "Physical damage",
+        "Water damage beyond rated protection",
+        "Battery degradation due to normal usage"
+      ]
+    },
+    "exchange_eligibility_period": "15 days",
+    "exchange_policy": {
+      "eligible": [
+        "Speaker not functioning properly",
+        "Incorrect model received",
+        "Defective battery"
+      ],
+      "not_eligible": [
+        "Scratches, dents, or water damage",
+        "Signs of excessive use",
+        "Connectivity issues caused by user error"
+      ]
+    }
+  },
+  {
+    "product_name": "Digital Camera",
+    "model_number": "DC-97531",
+    "serial_number": "SN443322110",
+    "date_of_purchase": "2023-07-20",
+    "return_eligibility_period": "7 days",
+    "return_policy": {
+      "eligible": [
+        "Lens defect upon arrival",
+        "Camera not powering on",
+        "Incorrect model received"
+      ],
+      "not_eligible": [
+        "Scratches on lens or body",
+        "Accessories missing",
+        "Visible usage marks on camera body"
+      ]
+    },
+    "refund_eligibility_period": "7 days",
+    "refund_policy": {
+      "eligible": [
+        "Lens defect upon arrival",
+        "Camera not powering on",
+        "Incorrect model received"
+      ],
+      "not_eligible": [
+        "Scratches on lens or body",
+        "Accessories missing",
+        "Visible usage marks on camera body"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": ["Lens malfunctions", "Sensor defects", "Battery issues"],
+      "not_covered": ["Accidental damage", "Scratches on lens", "Water damage"]
+    },
+    "exchange_eligibility_period": "7 days",
+    "exchange_policy": {
+      "eligible": [
+        "Lens defect upon arrival",
+        "Camera not powering on",
+        "Incorrect model received"
+      ],
+      "not_eligible": [
+        "Scratches on lens or body",
+        "Accessories missing",
+        "Visible usage marks on camera body"
+      ]
+    }
+  },
+  {
+    "product_name": "Microwave Oven",
+    "model_number": "MO-86420",
+    "serial_number": "SN556677221",
+    "date_of_purchase": "2023-06-10",
+    "return_eligibility_period": "10 days",
+    "return_policy": {
+      "eligible": [
+        "Microwave not heating properly",
+        "Received an incorrect model",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "Burn marks inside the oven",
+        "Electrical damage due to improper use",
+        "Damaged control panel after delivery"
+      ]
+    },
+    "refund_eligibility_period": "10 days",
+    "refund_policy": {
+      "eligible": [
+        "Microwave not heating properly",
+        "Received an incorrect model",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "Burn marks inside the oven",
+        "Electrical damage due to improper use",
+        "Damaged control panel after delivery"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": [
+        "Heating issues",
+        "Control panel defects",
+        "Door mechanism failure"
+      ],
+      "not_covered": [
+        "Burn marks inside the oven",
+        "Damage due to improper usage",
+        "Issues from power surges"
+      ]
+    },
+    "exchange_eligibility_period": "10 days",
+    "exchange_policy": {
+      "eligible": [
+        "Microwave not heating properly",
+        "Received an incorrect model",
+        "Unopened packaging"
+      ],
+      "not_eligible": [
+        "Burn marks inside the oven",
+        "Electrical damage due to improper use",
+        "Damaged control panel after delivery"
+      ]
+    }
+  },
+  {
+    "product_name": "Vacuum Cleaner",
+    "model_number": "VC-11223",
+    "serial_number": "SN887766554",
+    "date_of_purchase": "2023-05-05",
+    "return_eligibility_period": "14 days",
+    "return_policy": {
+      "eligible": [
+        "Motor failure upon arrival",
+        "Received a different model",
+        "Unused and sealed packaging"
+      ],
+      "not_eligible": [
+        "Dust accumulation due to use",
+        "Wear and tear of brush attachments",
+        "Physical damage after delivery"
+      ]
+    },
+    "refund_eligibility_period": "14 days",
+    "refund_policy": {
+      "eligible": [
+        "Motor failure upon arrival",
+        "Received a different model",
+        "Unused and sealed packaging"
+      ],
+      "not_eligible": [
+        "Dust accumulation due to use",
+        "Wear and tear of brush attachments",
+        "Physical damage after delivery"
+      ]
+    },
+    "warranty_period": "1 year",
+    "warranty_coverage": {
+      "covered": ["Motor failure", "Battery issues", "Suction power defects"],
+      "not_covered": [
+        "Clogging due to dust accumulation",
+        "Brush wear and tear",
+        "Physical damage"
+      ]
+    },
+    "exchange_eligibility_period": "14 days",
+    "exchange_policy": {
+      "eligible": [
+        "Motor failure upon arrival",
+        "Received a different model",
+        "Unused and sealed packaging"
+      ],
+      "not_eligible": [
+        "Dust accumulation due to use",
+        "Wear and tear of brush attachments",
+        "Physical damage after delivery"
+      ]
+    }
+  }
+]
