@@ -2,9 +2,10 @@ import datetime
 import json
 import openai
 from openai import OpenAI
-
-openai.api_key = "sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
-openai_client = OpenAI(api_key=openai.api_key)
+from dotenv import load_dotenv
+import os
+load_dotenv()
+openai_client = OpenAI(api_key=os.environ["OPEN_API_KEY"])
 
 EXTENSION_RULES = {
     "Smartphone": {"cost": "$49", "duration": "1 year"},
@@ -23,10 +24,10 @@ EXTENSION_RULES = {
     "Projector": {"cost": "$95", "duration": "2 year"},
     "VR Headset": {"cost": "$69", "duration": "1 year"},
     "Camera":{"cost":"$20", "duration":"1 year"}
-    
+   
 }
 
-with open('database.json', 'r') as file:
+with open('electron_list.json', 'r') as file:
     schemas = json.load(file)
 
 def parse_warranty_period(warranty_str):
@@ -206,6 +207,7 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
             context_variables["product_details"] =product_details +"6. "+(reason)
             
             extension_info = EXTENSION_RULES.get(metadata["Product Name"])
+            print("Extension info ==============",extension_info)   
             if remaining_days<=90:
                 extension_details=f"""
                     {reason},so would you like to extend the warranty period, it is just {extension_info["cost"]}, which extends your warranty period for upto {(extension_info["duration"])}"""
