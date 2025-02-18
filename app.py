@@ -5,11 +5,11 @@ import re
 from openai import OpenAI
 import os
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
  
-os.environ[
-    "OPENAI_API_KEY"] = "sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
- 
-open_ai= OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+open_ai= OpenAI(api_key=os.environ["OPEN_API_KEY"])
  
  
  
@@ -45,33 +45,10 @@ def generate_response(email_text):
         steps = re.findall(r"(?:\d+\.\s|\-\s)(.+)", response_content)
         procedure_steps = [step.strip() for step in steps]
         print("procedure stepssssssss==============================================",procedure_steps)
-
-        
-            
-
         import copy
-
-        
-        # Step 5: Update context with all information
-        # context_variables.update({
-        #     "product_details": procedure_steps,
-        #     'status': 'success',
-        #     'validation_steps': response_content,
-        #     # "generated_response": response_content,
-        #     # "Generated_status": response_content
-        # })
-
         response.context_variables["product_details"]=procedure_steps
         response.context_variables["status"]="Success"
         response.context_variables["validation_steps"]=response_content
-        # print("updated context variables",context_variables)
-        # return {
-        #     'status': 'success',
-        #     'validation_steps': response_content,
-        #     'context': context_variables
-        # }
-
-
         if not procedure_steps:
             response.context_variables["product_details"]=response_content
 
@@ -110,7 +87,7 @@ def send_response(context_variables):
         }
  
 def main():
-    st.set_page_config(page_title="SmartReplyAI", layout="wide")
+    st.set_page_config(page_title="AI Email Assistant", layout="wide")
    
     # Initialize session state
     if 'response_generated' not in st.session_state:
@@ -156,9 +133,9 @@ def main():
     col1, col2 = st.columns([1, 1])
    
     with col1:
-        if st.button("🚀 Get Information", use_container_width=True):
+        if st.button("🚀 Generate Response", use_container_width=True):
              if email_text:
-                with st.spinner("🤖 Fetching Informations..."):
+                with st.spinner("🤖 Generating response..."):
                     response = generate_response(email_text)
                     # st.write(response)
                     if response['status'] == 'Success':
@@ -241,12 +218,12 @@ def main():
                     st.write("**From:** harshavardhanbudda@gmail.com")
                     # st.write("**Subject:**", st.session_state.send_result['subject'])
                     st.write("**Email Body:**")
-                    # st.info(send_result["res_subject"])
+                    st.info(send_result["res_subject"])
                     st.info(send_result['body'])
             else:
                 st.error(f"❌ {send_result['message']}")
-        # else:
-        #     st.warning("⚠️ Please generate a response first.")
+        else:
+            st.warning("⚠️ Please generate a response first.")
    
     # # Display Response Details
     # if st.session_state.response_generated:
