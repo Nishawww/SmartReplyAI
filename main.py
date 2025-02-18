@@ -29,6 +29,13 @@ EXTENSION_RULES = {
     "Digital Camera": {"cost": "$89", "duration": "2 year"},
     "Microwave Oven": {"cost": "$35", "duration": "2 year"},
     "Vacuum Cleaner": {"cost": "$45", "duration": "1 year"},
+    "Router":{"cost": "$39", "duration": "1 year"},
+    "Monitor":{"cost":"$45", "duration":"1 year"},
+    "External Hard Drive": {"cost": "$55", "duration": "2 year"},
+    "Projector": {"cost": "$95", "duration": "2 year"},
+    "VR Headset": {"cost": "$69", "duration": "1 year"},
+    "Camera":{"cost":"$20", "duration":"1 year"}
+    
 }
 
 
