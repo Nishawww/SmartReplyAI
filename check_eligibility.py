@@ -5,10 +5,13 @@ from database import retrieve
 import openai
 from openai import OpenAI
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 from functionality import extract_model_number,retrieve_for_model
 
-openai.api_key = "sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
-openai_client = OpenAI(api_key=openai.api_key)
+openai_client = OpenAI(api_key=os.environ["OPEN_API_KEY"])
 
 
 
