@@ -3,7 +3,7 @@ import json
 import openai
 from openai import OpenAI
 
-openai.api_key = "sk-proj-NfwNBItyMTe0vMeRY9LqT3BlbkFJpTRyfMxAiJ3wN4TRBLtE"
+openai.api_key = "sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
 openai_client = OpenAI(api_key=openai.api_key)
 
 EXTENSION_RULES = {
