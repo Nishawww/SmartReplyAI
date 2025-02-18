@@ -9,14 +9,14 @@ import email
 import json
 from email import policy
 from email.parser import BytesParser, Parser
-# from process_refund_1 import process_refund
-# from refund_intent import classify_refund_intent
 from functionality import check_warranty_extension_eligibility
 from check_eligibility import check_exchange_eligibility, check_refund_eligibility, check_return_eligibility
 from send_mail import generate_answer
-api_key="sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
+from dotenv import load_dotenv
 
-openai_client= OpenAI(api_key= api_key)
+load_dotenv()
+import os
+openai_client= OpenAI(api_key= os.environ["OPEN_API_KEY"])
 client = Swarm(openai_client)
 EXTENSION_RULES = {
     "Smartphone": {"cost": "$49", "duration": "1 year"},
@@ -35,7 +35,7 @@ EXTENSION_RULES = {
     "Projector": {"cost": "$95", "duration": "2 year"},
     "VR Headset": {"cost": "$69", "duration": "1 year"},
     "Camera":{"cost":"$20", "duration":"1 year"}
-    
+   
 }
 
 
@@ -289,14 +289,14 @@ refund_agent= Agent(
 return_agent= Agent(
     name= "return_agent",
     model= "gpt-4o-mini",
-    instructions= """1.Call this function to fetch return related informations from coordinator agent.,
+    instructions= """1.Call this function to fetch return related informations from check_return_eligibility function.,
                      2. check eligblity if a query claims return.""",
     functions= [transfer_back_to_control_agent, transfer_to_technical_agent, transfer_to_coordinator_agent, check_return_eligibility],
 )
 exchange_agent= Agent(
     name="exchange_agent",
     model= "gpt-4o-mini",
-    instructions= """1.Call this function to fetch exchange related informations from coordinator agent.,
+    instructions= """1.Call this function to fetch exchange related informations from check_exchange_eligibility function.,
                      2. check eligblity if a query claims exchange.""",
     functions= [transfer_to_technical_agent, transfer_back_to_control_agent, transfer_to_coordinator_agent, check_exchange_eligibility],
 )
@@ -309,7 +309,7 @@ technical_agent= Agent(
 control_agent= Agent(
     name="control_agent",
     model= "gpt-3.5-turbo",
-    instructions= "1.you supervise the agents accordingly."
+    instructions= "1.you supervise the agents accordingly and Based on the query you will choose appropriate agent."
                     "2.If the Query is regarding about Multiple policies, then call transfer_to_coordinator_agent",
     functions= [transfer_to_warranty_agent,
                  transfer_to_exchange_agent,
