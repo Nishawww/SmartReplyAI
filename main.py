@@ -14,7 +14,7 @@ from email.parser import BytesParser, Parser
 from functionality import check_warranty_extension_eligibility
 from check_eligibility import check_exchange_eligibility, check_refund_eligibility, check_return_eligibility
 from send_mail import generate_answer
-api_key="sk-proj-NfwNBItyMTe0vMeRY9LqT3BlbkFJpTRyfMxAiJ3wN4TRBLtE"
+api_key="sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
 
 openai_client= OpenAI(api_key= api_key)
 client = Swarm(openai_client)
