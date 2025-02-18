@@ -5,13 +5,11 @@ import json
 import os
 from dotenv import load_dotenv
 from swarm import Swarm, Agent
-
+load_dotenv()
 # Initialize OpenAI API
-openai.api_key = "sk-svcacct-f-w8Kl1PbYP-xfJ0mJA5tJ9iMGLfZNBlJWfPNrpzLak9H-MO2orHBdyIa7a5tWT3BlbkFJGUdItJUijerYpfDpR29p_RjNJpfTflOgFdugRlWXm21PB3Rfn5kqZ4FkmmzD8A"
+openai.api_key =os.environ["OPEN_API_KEY"]
 
-api_key = "pcsk_6unayn_7NDiyFLZmevgcuGCz1cp5xm39AHDrm7zoWNREmtVJHPr4Nb9CBzczeXQBpqjohG"
-
-pc = Pinecone(api_key= api_key)   
+pc = Pinecone(api_key= os.environ["PINECONE_API_KEY"])   
 
 # Create or connect to pc index
 index_name = "email-rag"
