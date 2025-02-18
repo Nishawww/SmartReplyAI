@@ -87,7 +87,7 @@ def send_response(context_variables):
         }
  
 def main():
-    st.set_page_config(page_title="AI Email Assistant", layout="wide")
+    st.set_page_config(page_title="SmartReplyAI", layout="wide")
    
     # Initialize session state
     if 'response_generated' not in st.session_state:
@@ -133,9 +133,9 @@ def main():
     col1, col2 = st.columns([1, 1])
    
     with col1:
-        if st.button("🚀 Generate Response", use_container_width=True):
+        if st.button("🚀 Get Information", use_container_width=True):
              if email_text:
-                with st.spinner("🤖 Generating response..."):
+                with st.spinner("🤖 Fetching Informations..."):
                     response = generate_response(email_text)
                     # st.write(response)
                     if response['status'] == 'Success':
@@ -218,12 +218,12 @@ def main():
                     st.write("**From:** harshavardhanbudda@gmail.com")
                     # st.write("**Subject:**", st.session_state.send_result['subject'])
                     st.write("**Email Body:**")
-                    st.info(send_result["res_subject"])
+                    # st.info(send_result["res_subject"])
                     st.info(send_result['body'])
             else:
                 st.error(f"❌ {send_result['message']}")
-        else:
-            st.warning("⚠️ Please generate a response first.")
+        # else:
+        #     st.warning("⚠️ Please generate a response first.")
    
     # # Display Response Details
     # if st.session_state.response_generated:
