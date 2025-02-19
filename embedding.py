@@ -100,5 +100,5 @@ for schema in schemas:
         }
     ])
 
-print(response)
-print("Embeddings successfully stored in pinecone!")
+# print(response)
+# print("Embeddings successfully stored in pinecone!")
