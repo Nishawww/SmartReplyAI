@@ -60,12 +60,12 @@ def retrieve_for_model(query:str):
         return None  # No product found
 
     except Exception as e:
-        print(f"Error in retrieve function: {e}")  # Debugging log
+        # print(f"Error in retrieve function: {e}")  # Debugging log
         return None
 
 def retrieve(query: str):
     """Retrieve product details from the JSON database."""
-    print(f"Searching for: {query}")  # Debugging log
+    # print(f"Searching for: {query}")  # Debugging log
 
     try:
         # Open and load the JSON database
@@ -82,7 +82,7 @@ def retrieve(query: str):
         return None  # No product found
 
     except Exception as e:
-        print(f"Error in retrieve function: {e}")  # Debugging log
+        # print(f"Error in retrieve function: {e}")  # Debugging log
         return None
 
 def extract_model_number(user_query):
@@ -92,7 +92,7 @@ def extract_model_number(user_query):
                 after extraction just return the Model number or "No Model Number" other than that i don't want any thing"""
     reponse=openai_client.chat.completions.create(model="gpt-4o-mini",messages=[{"role":"user","content":prompttt}])
     resp=reponse.choices[0].message.content
-    print("rep from user query Modellll==========================",resp)
+    print("rep from user query Modellll====================/
 
     return resp
 
@@ -105,7 +105,7 @@ def extract_serial_number(user_query):
                 after extraction just return the serial number or "No Serial Number" other than that i don't want any thing"""
     reponse=openai_client.chat.completions.create(model="gpt-4o-mini",messages=[{"role":"user","content":prompttt}])
     resp=reponse.choices[0].message.content
-    print("rep from user query serialllllll==========================",resp)
+    # print("rep from user query serialllllll==========================",resp)
 
     return resp
 
@@ -138,7 +138,7 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
     #     return {"eligible": False, "reason": "Product not found in query."}
 
     # product_data = retrieve(serial_num)
-    print(product_data)
+    # print(product_data)
     metadata = product_data[0]['metadata']
 
     warranty_cover_details=metadata.get("warranty_coverage_covered")
@@ -162,10 +162,10 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
                                           messages=messages,)
     process=response.choices[0].message.content
     context_variables["to_know_the_process"]=process
-    print("response from llm to create context============",process)
+    # print("response from llm to create context============",process)
 
 
-    print("Meta data of the product===================",metadata)
+    # print("Meta data of the product===================",metadata)
 
 
     product_details = f"""
@@ -175,7 +175,7 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
     4. Not covered: {(metadata['warranty_coverage_not_covered'])}.
     5. If all conditions are met, the product is eligible for repair/replacement.
     """
-    print(product_details)
+    # print(product_details)
 
     context_variables["product_details"]=product_details
     
@@ -195,7 +195,7 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
         remaining_days = (warranty_end_date-today).days
 
 
-        print("remainingggggggggggggggggggggggggg daysssssssssssssssss=======================",remaining_days)
+        # print("remainingggggggggggggggggggggggggg daysssssssssssssssss=======================",remaining_days)
         # check heree whether days are positive or not
         # print(warranty_end_date)
 
@@ -207,7 +207,7 @@ def check_warranty_extension_eligibility(user_query,context_variables:dict):
             context_variables["product_details"] =product_details +"6. "+(reason)
             
             extension_info = EXTENSION_RULES.get(metadata["Product Name"])
-            print("Extension info ==============",extension_info)   
+            # print("Extension info ==============",extension_info)   
             if remaining_days<=90:
                 extension_details=f"""
                     {reason},so would you like to extend the warranty period, it is just {extension_info["cost"]}, which extends your warranty period for upto {(extension_info["duration"])}"""
