@@ -61,7 +61,7 @@ def check_return_eligibility(user_query,context_variables:dict):
     if model_num !="No Model Number":
         product_data=retrieve_for_model(model_num)
     
-    print("Data from return==========================================",product_data)
+    # print("Data from return==========================================",product_data)
     
     if not product_data:
         return {"eligible": False, "reason": "Product details not found in database."}
@@ -90,11 +90,11 @@ def check_return_eligibility(user_query,context_variables:dict):
                                           messages=messages,)
     
     to_know_process=response.choices[0].message.content
-    print("response from llm to create context============",response.choices[0].message.content)
+    # print("response from llm to create context============",response.choices[0].message.content)
 
     context_variables["to_know_the_process"]=to_know_process
 
-    print("Meta data of the product===================",metadata)
+    # print("Meta data of the product===================",metadata)
 
 
     
@@ -181,7 +181,7 @@ def check_refund_eligibility(user_query,context_variables:dict):
                                           messages=messages,)
     
     to_know_process=response.choices[0].message.content
-    print("response from llm to create context============",to_know_process)
+    # print("response from llm to create context============",to_know_process)
 
     context_variables["to_know_the_process"]=to_know_process
 
@@ -241,7 +241,7 @@ def check_exchange_eligibility(user_query,context_variables:dict):
     if model_num !="No Model Number":
         product_data=retrieve_for_model(model_num)
     
-    print("product data from check exchange eligibility==================",product_data)
+    # print("product data from check exchange eligibility==================",product_data)
     
     if not product_data:
         return {"eligible": False, "reason": "Product details not found in database."}
@@ -298,7 +298,7 @@ def check_exchange_eligibility(user_query,context_variables:dict):
 
         
         today = datetime.date.today()
-        print("exchangeeeee deadlineeeeeeeeeeeeeeeeeeeeeeeeee================", exchange_deadline,"=================",today)
+        # print("exchangeeeee deadlineeeeeeeeeeeeeeeeeeeeeeeeee================", exchange_deadline,"=================",today)
         
         if today <= exchange_deadline:
             reason= f"Exchange  allowed until {exchange_deadline.strftime('%Y-%m-%d')} days.So do you want to go for any exchange process."
