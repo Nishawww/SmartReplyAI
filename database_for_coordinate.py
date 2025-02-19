@@ -72,7 +72,7 @@ Warranty not covers: {(metadata["warranty_coverage_not_covered"])}
         contexts.append(context)
     
     combined_context = "\n\n---\n\n".join(contexts)
-    print("combined_context------------",combined_context)
+    # print("combined_context------------",combined_context)
     # Step 3: Create prompt and generate response
     prompt = f"""Based on the following product policies and information, please answer the user's query.
 Provide a clear, step-by-step response when applicable.
@@ -97,7 +97,7 @@ Please provide a specific, accurate response based only on the information provi
     res_from_generate=response.choices[0].message.content
 
 
-    print("Responseeeeeeeeeeeeeeeee from Generateeeeeeeeeeeeeeee==================",res_from_generate)
+    # print("Responseeeeeeeeeeeeeeeee from Generateeeeeeeeeeeeeeee==================",res_from_generate)
     context_variables["product_details"]=res_from_generate
     
 
@@ -129,7 +129,7 @@ def coordinate(query: str,context_variables:dict):
     
     product_det_from_cordinate=response.context_variables["product_details"]
 
-    print("response from cordinate==================================",product_det_from_cordinate)
+    # print("response from cordinate==================================",product_det_from_cordinate)
 
 
     context_variables["product_details"]=product_det_from_cordinate
