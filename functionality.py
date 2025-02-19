@@ -92,7 +92,7 @@ def extract_model_number(user_query):
                 after extraction just return the Model number or "No Model Number" other than that i don't want any thing"""
     reponse=openai_client.chat.completions.create(model="gpt-4o-mini",messages=[{"role":"user","content":prompttt}])
     resp=reponse.choices[0].message.content
-    print("rep from user query Modellll====================/
+    # print("rep from user query Modellll====================)
 
     return resp
 
