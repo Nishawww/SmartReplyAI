@@ -26,17 +26,17 @@ def generate_response(email_text):
         #     "Subject": email_content['subject'],
         #     "Body_of_the_mail": email_content['body']
         # })
-        print(context_variables)
+        # print(context_variables)
         # Step 3: Use intent_analys to analyze and get query
         query_from_analysis = intent_analys(context_variables)
-        print("intent_result",query_from_analysis)
+        # print("intent_result",query_from_analysis)
         ate_of_buying=extract_dop_from_query(context_variables)
         
         # Step 4: Generate response using control agent
         messages = [{"role": "user", "content": query_from_analysis["Query"]}]
         response = client.run(agent=control_agent, messages=messages,context_variables=ate_of_buying)
         
-        print("The rspomse from the agent=======================",response)
+        # print("The rspomse from the agent=======================",response)
         
         # Get the response content
         response_content = response.context_variables["product_details"]
@@ -44,7 +44,7 @@ def generate_response(email_text):
         # Extract steps from response
         steps = re.findall(r"(?:\d+\.\s|\-\s)(.+)", response_content)
         procedure_steps = [step.strip() for step in steps]
-        print("procedure stepssssssss==============================================",procedure_steps)
+        # print("procedure stepssssssss==============================================",procedure_steps)
         import copy
         response.context_variables["product_details"]=procedure_steps
         response.context_variables["status"]="Success"
@@ -55,7 +55,7 @@ def generate_response(email_text):
 
         context_variables=copy.deepcopy(response.context_variables)
 
-        print("the cdsbdjsd fjshdfjhsfjdsbfmsbfd ===============================",context_variables)
+        # print("the cdsbdjsd fjshdfjhsfjdsbfmsbfd ===============================",context_variables)
 
         return context_variables
     
