@@ -5,8 +5,9 @@ from services import gmail_authenticate
 from email.message import EmailMessage
 import base64
 import json
+from dotenv import load_dotenv
 # # Ensure API Key is set in the environment
-
+load_dotenv()
 open_ai= OpenAI(api_key=os.environ["OPEN_API_KEY"])
 # # Initialize the Swarm client
 client = Swarm(open_ai)
